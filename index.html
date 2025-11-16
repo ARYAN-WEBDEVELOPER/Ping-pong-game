@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping Pong Game</title>
+    <style>
+       body {
+    margin: 0;
+    background: linear-gradient(to right, #000000, #0f2027, #203a43, #2c5364);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+    box-shadow: 0 0 30px lime;
+    border: 2px solid lime;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: black;
+}
+
+#gameOver {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 20, 20, 0.9);
+    color: #00ffcc;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #00ffcc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#restartBtn:hover {
+    background: #00ffee;
+}
+
+    </style>
+</head>
+<body>
+    <canvas id="table" width="800" height="500"></canvas>
+
+    <!-- Game Over Popup -->
+    <div id="gameOver">
+        <h1>Game Over!</h1>
+        <p id="winnerText"></p>
+        <button id="restartBtn">Restart</button>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="hitSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+    <audio id="scoreSound" src="https://www.soundjay.com/button/button-16.wav"></audio>
+    <audio id="wallSound" src="https://www.soundjay.com/button/button-29.wav"></audio>
+
+    <script src="script4.js"></script>
+</body>
+</html>
